@@ -1,7 +1,7 @@
 import { DEFAULT_ICON_SIZE } from "../constants/default-icon-size"
 import { getPathByName } from "../helpers/get-path-by-name"
 import { TIconName } from "../models/icon-name"
-import SVGWrapper from "../svg/svg-wrapper"
+import { SVGWrapper } from "../svg/svg-wrapper"
 
 interface IIconProps {
     name: TIconName;
@@ -11,12 +11,12 @@ interface IIconProps {
 
 /**
  * This is kind of gross to use <Icon name="foo" /> instead of <Foo /> but it may result in a smaller bundle
- * @param param0 
- * @returns 
+ * After some thought I think this way will bloat the package more as it dpeends on getPathByName which will grow massively
+ * @deprecated - use the specific icon
  */
 export const Icon = ({ name, height, width }: IIconProps) => {
     return (
-        <SVGWrapper height={height || DEFAULT_ICON_SIZE} width={width || DEFAULT_ICON_SIZE} viewBox="0 0 24 24">
+        <SVGWrapper height={height} width={width} >
             <path d={getPathByName(name)} />
         </SVGWrapper>
     )

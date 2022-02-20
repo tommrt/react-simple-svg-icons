@@ -1,7 +1,7 @@
 import { TIconName } from "../models/icon-name";
 
 /**
- * @todo minify
+ * I think this is dodgy because it will bloat the package
  * @param name 
  * @returns 
  */
