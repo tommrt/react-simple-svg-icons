@@ -7,3 +7,4 @@ dev/**/*
 webpack.config.js
 dist/**/*
 bin/**/*
+.yalc/**/*
