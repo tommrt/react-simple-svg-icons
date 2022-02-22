@@ -2,29 +2,30 @@ import styled from 'styled-components';
 import { DEFAULT_ICON_SIZE } from '../constants/default-icon-size';
 import { TReactChildren } from '../models/react-children';
 
+type TIconStyle = 'thin' | 'regular' | 'solid';
+
 /**
  * The common svg styles
  */
-const SVGWrapperStyle = styled.svg((props) => (
+const SVGWrapperStyle = styled.svg<{ iconStyle?: TIconStyle }>((props) => (
     {
         stroke: 'currentcolor',
-        strokeWidth: '2px',
+        strokeWidth: `${props.iconStyle === 'thin' ? 1 : 2}px`,
         fill: 'none',
         strokeLinejoin: 'round',
         strokeLinecap: 'round',
-        // width: `${props.width || DEFAULT_ICON_SIZE}px`,
-        // height: `${props.height || DEFAULT_ICON_SIZE}px`,
     })
 );
 
 interface IProps {
     height?: number;
     width?: number;
+    iconStyle?: TIconStyle
 }
 
-export const SVGWrapper = ({ height, width, children }: IProps & TReactChildren) => {
+export const SVGWrapper = ({ height, width, iconStyle, children }: IProps & TReactChildren) => {
     return (
-        <SVGWrapperStyle height={height || DEFAULT_ICON_SIZE} width={width || DEFAULT_ICON_SIZE} viewBox='0 0 24 24'>
+        <SVGWrapperStyle iconStyle={iconStyle} height={height || DEFAULT_ICON_SIZE} width={width || DEFAULT_ICON_SIZE} viewBox='0 0 24 24'>
             {children}
         </SVGWrapperStyle>
     )

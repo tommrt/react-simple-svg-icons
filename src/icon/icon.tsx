@@ -1,4 +1,3 @@
-import { DEFAULT_ICON_SIZE } from "../constants/default-icon-size"
 import { getPathByName } from "../helpers/get-path-by-name"
 import { TIconName } from "../models/icon-name"
 import { SVGWrapper } from "../svg/svg-wrapper"
