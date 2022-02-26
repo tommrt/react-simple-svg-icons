@@ -1,0 +1,1 @@
+export type TIconStyle = 'thin' | 'regular' | 'solid';

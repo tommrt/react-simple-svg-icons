@@ -1,11 +1,11 @@
 import { IIconProps } from "../../models/icon-props"
 import { SVGWrapper } from "../../svg/svg-wrapper"
-import { CALENDAR_PATH } from "../paths/calendar"
+import { ANGLE_RIGHT_PATH } from "../paths/angle-right"
 
-export const Calendar = ({ height, width, iconStyle }: IIconProps) => {
+export const AngleRight = ({ height, width, iconStyle }: IIconProps) => {
     return (
         <SVGWrapper iconStyle={iconStyle} height={height} width={width}>
-            <path d={CALENDAR_PATH} />
+            <path d={ANGLE_RIGHT_PATH} />
         </SVGWrapper>
     )
 }

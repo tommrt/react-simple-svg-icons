@@ -1,0 +1,1 @@
+export const CHECKMARK_PATH: string = 'M5 16L10 20L20 4';

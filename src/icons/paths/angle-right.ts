@@ -1,0 +1,1 @@
+export const ANGLE_RIGHT_PATH: string = 'M10 6L16 12L10 18';

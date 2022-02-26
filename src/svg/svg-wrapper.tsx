@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { DEFAULT_ICON_SIZE } from '../constants/default-icon-size';
+import { TIconStyle } from '../models/icon-style';
 import { TReactChildren } from '../models/react-children';
-
-type TIconStyle = 'thin' | 'regular' | 'solid';
 
 /**
  * The common svg styles

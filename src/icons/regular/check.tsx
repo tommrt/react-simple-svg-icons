@@ -1,10 +1,11 @@
-// import SVGWrapper from "../../svg/svg-wrapper"
+import { IIconProps } from "../../models/icon-props"
+import { SVGWrapper } from "../../svg/svg-wrapper"
+import { CHECKMARK_PATH } from "../paths/checkmark"
 
-export const Check = () => {
+export const Check = ({ height, width, iconStyle }: IIconProps) => {
     return (
-        null
-        // <SVGWrapper>
-        //     <polyline points="2 2 10 22 16 14" />
-        // </SVGWrapper>
+        <SVGWrapper iconStyle={iconStyle} height={height} width={width} >
+            <path d={CHECKMARK_PATH} />
+        </SVGWrapper>
     )
 }
